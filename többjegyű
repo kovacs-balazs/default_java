@@ -1,0 +1,168 @@
+package me.koba1.list;
+
+
+import java.util.Scanner;
+
+public class tobbjegyu {
+
+    //public static void main(String[] args) {
+
+/*        Scanner szemek = new Scanner(System.in);
+        System.out.println("Írj be számot!");
+        int szam1 = szemek.nextInt();
+        System.out.println("Írj be másik számot!");
+        int szam2 = szemek.nextInt();
+        System.out.println("Két szám összege: " + (szam1 + szam2));
+
+        szemek.close();
+
+//        String[] fruits = new String[5];
+//        fruits[0] = "Mango";
+//        fruits[1] = "Eper";
+//        fruits[2] = "Malna";
+//        fruits[3] = "Dinnye";
+//        fruits[4] = "citrom";
+//        System.out.println(fruits);
+//
+//        ArrayList fruitList = new ArrayList();
+//        fruitList.add("Mango");
+//        fruitList.add("Alma");
+//        fruitList.add("Narancs");
+//        fruitList.add("Papagaj");
+//        fruitList.add("citrom");
+//
+//        fruitList.remove("Narancs");
+////        fruitList.clear();
+//        System.out.println(fruitList.contains("citrom"));
+//
+//        System.out.println(fruitList);
+//
+//        if(fruitList.contains("citrom")) {
+//            System.out.println("Van a listában citrom!");
+//        } else {
+//            System.out.println("Nincsen a listában citrom!");
+//        }*/
+
+    /*public static void main(String args[]) {
+
+        Scanner kit = new Scanner(System.in);
+        System.out.println("Írj be számot!");
+        int selected = kit.nextInt();
+
+
+        switch (selected) {
+            case 1:
+                System.out.println("Asd1");
+                break;
+            case 2:
+                System.out.println("Asd2");
+                break;
+            case 3:
+                System.out.println("Asd3");
+                break;
+            default:
+                System.out.println("Egyiksem");
+                break;
+        }
+    }*/
+
+    /*public static void main(String[] args) {
+
+        Scanner kit = new Scanner(System.in);
+        System.out.println("Írj be valamit!");
+        String selected2 = kit.nextLine();
+
+        switch (selected2) {
+            case "standard":
+                System.out.println("standard");
+                break;
+            case "standard2":
+                System.out.println("standard2");
+                break;
+            case "standard3":
+                System.out.println("standard3");
+                break;
+            case "upgraded":
+                System.out.println("upgraded");
+                break;
+            default:
+                System.out.println("Egyiksem");
+                break;
+        }
+    }*/
+
+    /*public static void main(String[] args) {
+        long most = Instant.now().getEpochSecond();
+        System.out.println(most);
+        //time.sleep(1)
+        //itt resetel
+    }*/
+
+/*    public static void main(String[] args) {
+
+        long unix = Instant.now().getEpochSecond();
+        System.out.println(unix);
+        HashMap<String, Long> mines = new HashMap();
+
+        mines.put("mines", 10L);
+        mines.put("mines3", 5L);
+
+        HashMap<String, Long> mines_secs = new HashMap();
+        mines_secs = (HashMap<String, Long>) mines.clone();
+        System.out.println(mines_secs);
+
+        for (HashMap.Entry<String, Long> e : mines.entrySet()) {
+            String key = e.getKey();
+            long val = e.getValue();
+            long val_unix = val + unix;
+            mines.put(key, val_unix);
+        }
+
+        while(true) {
+            long unix2 = Instant.now().getEpochSecond();
+            for (HashMap.Entry<String, Long> e : mines.entrySet()) {
+                String key = e.getKey();
+                long val = e.getValue();
+                if(val == unix2) {
+                    mines.put(key, val + mines_secs.get(key));
+                    System.out.println("asd");
+                }
+            }
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            System.out.println(unix2);
+        }
+    }*/
+    public static void main(String[] args) {
+        Scanner give = new Scanner(System.in);
+        System.out.println("Írj be egy számot!");
+        int num = give.nextInt();
+
+        if(num <= 9 && num >= 0) {
+            System.out.println("Ez a szám egyjegyű");
+        }
+        // ---
+
+        if(num < 0) {
+            System.out.println("Ez a szám negatív");
+        }
+        // ---
+
+        else if(num >= 10 && num <= 99) {
+            System.out.println("Ez a szám kétjegyű");
+        }
+        // ---
+        else if(num >= 100 && num <= 999) {
+            System.out.println("Ez a szám háromjegyű");
+        }
+        // ---
+        else if(num > 999) {
+            System.out.println("Ez a szám több mint háromjegyű");
+        }
+    }
+}
