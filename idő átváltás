@@ -1,0 +1,103 @@
+package me.koba1.list;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class listtime {
+
+    public static void main(String[] args) {
+        Scanner sr = new Scanner(System.in);
+
+        List<String> time = new ArrayList();
+        List<Integer> times = new ArrayList();
+
+        System.out.println("Melyiket szeretnéd átváltani? 'Sec', 'Min', 'Hour'");
+        String time1 = sr.next().toLowerCase();
+        switch (time1) {
+            case "sec":
+                time.add("sec");
+                break;
+            case "min":
+                time.add("min");
+                break;
+            case "hour":
+                time.add("hour");
+                break;
+            default:
+                System.out.println("Válassz: 'Sec', 'Min', 'Hour'");
+        }
+
+        System.out.println("Mennyi lenne ez?");
+        int time11 = sr.nextInt();
+        times.add(time11);
+
+        // ------------------------------------------------------------
+
+        System.out.println("Mibe szeretnéd átváltani? 'Sec', 'Min', 'Hour'");
+        String time2 = sr.next().toLowerCase();
+        switch (time2) {
+            case "sec":
+                time.add("sec");
+                break;
+            case "min":
+                time.add("min");
+                break;
+            case "hour":
+                time.add("hour");
+                break;
+            default:
+                System.out.println("Válassz: 'Sec', 'Min', 'Hour'");
+        }
+
+        String gettime1 = time.get(0);
+        int gettime2 = times.get(0);
+        String gettime3 = time.get(1);
+
+        if(gettime1.equals("sec") && gettime3.equals("sec")) {
+            System.out.println("Átváltva: " + gettime2);
+        }
+        // -
+
+        else if(gettime1.equals("sec") && gettime3.equals("min")) {
+            System.out.println("Átváltva: " + (gettime2 / 60f));
+        }
+        // -
+
+        else if(gettime1.equals("sec") && gettime3.equals("hour")) {
+            System.out.println("Átváltva: " + (gettime2 / 60f / 60f));
+        }
+
+        // --------------------------------------------
+
+        else if(gettime1.equals("min") && gettime3.equals("sec")) {
+            System.out.println("Átváltva: " + (gettime2 * 60f));
+        }
+        // -
+
+        else if(gettime1.equals("min") && gettime3.equals("min")) {
+            System.out.println("Átváltva: " + gettime2);
+        }
+        // -
+
+        else if(gettime1.equals("min") && gettime3.equals("hour")) {
+            System.out.println("Átváltva: " + (gettime2 / 60f));
+        }
+
+        // --------------------------------------------
+
+        else if(gettime1.equals("hour") && gettime3.equals("sec")) {
+            System.out.println("Átváltva: " + (gettime2 * 60f * 60f));
+        }
+        // -
+
+        else if(gettime1.equals("hour") && gettime3.equals("min")) {
+            System.out.println("Átváltva: " + (gettime2 * 60f));
+        }
+        // -
+
+        else if(gettime1.equals("hour") && gettime3.equals("hour")) {
+            System.out.println("Átváltva: " + gettime2);
+        }
+    }
+}
