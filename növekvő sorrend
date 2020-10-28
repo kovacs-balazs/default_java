@@ -1,0 +1,33 @@
+package me.koba1.list;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class novekvosorrend {
+
+    public static void main(String[] args) {
+        ArrayList list1 = new ArrayList();
+        ArrayList list2 = new ArrayList();
+
+        int number;
+        while(!list2.contains("done")) {
+            Scanner sr = new Scanner(System.in);
+
+            try {
+                System.out.println("Adj meg egy számot! Befejezéshez írd be a 'Done' szavat!");
+                number = sr.nextInt();
+                list1.add(number);
+            } catch (Exception e) {
+                list2.add(sr.next());
+                if (list2.contains("done")) {
+                    Collections.sort(list1);
+                    String text = list1.toString().replace("[", "").replace("]", "");
+                    System.out.println("Sorrend: " + text);
+                } else {
+                    System.out.println("'Done' szóval kell befejezni!");
+                }
+            }
+        }
+    }
+}
