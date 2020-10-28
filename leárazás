@@ -1,0 +1,26 @@
+package me.koba1.list;
+
+import java.util.Scanner;
+
+public class learazas {
+
+    public static void main(String[] args) {
+        float downpriced;
+        Scanner sr = new Scanner(System.in);
+
+        System.out.println("Add meg az árát!");
+        int original = sr.nextInt();
+
+        System.out.println("Add meg a leárazás értékét!");
+        int downprice = sr.nextInt();
+
+        if(!(downprice >= 1 && downprice <= 100)) {
+            System.out.println("Reális értéket adj meg!");
+        }
+
+        downpriced = original * (downprice * (float) 0.01);
+        float realprice = original - downpriced;
+
+        System.out.println("Az áru akciós ára: " + (int) realprice);
+    }
+}
