@@ -1,0 +1,27 @@
+package me.koba1.list;
+
+import java.util.Scanner;
+
+public class oszthatoe {
+    public static void main(String[] args) {
+        int num1;
+        int num2;
+        double num3;
+        Scanner number = new Scanner(System.in);
+
+        System.out.println("Adj meg egy számot!");
+        num1 = number.nextInt();
+
+        System.out.println("Adj meg egy másik számot!");
+        num2 = number.nextInt();
+
+        num3 = (num2 / num1);
+
+        if(num3 == 0) {
+            System.out.println("Oszthatóak egymással");
+        } else {
+            System.out.println("Nem oszthatóak egymással");
+        }
+
+    }
+}
