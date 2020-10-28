@@ -1,0 +1,92 @@
+package me.koba1.list;
+
+import java.util.Scanner;
+
+public class alapmuveletek {
+
+    public static void main(String[] args) {
+
+        String selected;
+        Scanner sr = new Scanner(System.in);
+
+        System.out.println("Melyik? Válassz: '+', '-', '*', '/'");
+        String input = sr.nextLine();
+
+        while (!("+".equals(input) || "-".equals(input) || "*".equals(input) || "/".equals(input))) {
+            System.out.println("Melyik? Válassz: '+', '-', '*', '/'");
+            input = sr.next();
+        }
+
+        switch (input) {
+            case "+":
+                try {
+                    System.out.println("Add meg az első összeadandót!");
+                    float osszeadando1 = sr.nextFloat();
+
+                    System.out.println("Add meg az második összeadandót!");
+                    float osszeadando2 = sr.nextFloat();
+
+                    float osszeg = osszeadando1 + osszeadando2;
+                    System.out.println("Összeg: " + osszeg);
+
+                } catch (Exception e) {
+                    System.out.println("Kérlek számot adj meg!");
+                }
+                break;
+
+            case "-":
+                try {
+                    System.out.println("Add meg a kisebbítendőt!");
+                    float kisebbitendo = sr.nextFloat();
+
+                    System.out.println("Add meg a kivonandót!");
+                    float kivonando =  sr.nextFloat();
+
+                    float eredmeny = kisebbitendo - kivonando;
+                    System.out.println("Eredmény: " + eredmeny);
+
+                } catch (Exception e) {
+                    System.out.println("Kérlek számot adj meg!");
+                }
+                break;
+
+            case "*":
+                try {
+
+                    System.out.println("Add meg a szorzandót!");
+                    float szorzando = sr.nextFloat();
+
+                    System.out.println("Add meg a szorzót!");
+                    float szorzo = sr.nextFloat();
+
+                    float szorzat = szorzando * szorzo;
+                    System.out.println("Szorzat: " + szorzat);
+
+                } catch (Exception e) {
+                    System.out.println("Kérlek számot adj meg!");
+                }
+                break;
+
+            case "/":
+                try {
+                    System.out.println("Add meg az osztandót!");
+                    float osztando = sr.nextFloat();
+
+                    System.out.println("Add meg az osztót!");
+                    float oszto = sr.nextFloat();
+
+                    while(oszto == 0) {
+                        System.out.println("Add meg újra az osztót!");
+                        oszto = sr.nextFloat();
+                    }
+
+                    float hanyados = osztando / oszto;
+                    System.out.println("Hányados: " + hanyados);
+
+                } catch (Exception e) {
+                    System.out.println("Kérlek számot adj meg!");
+                }
+                break;
+        }
+    }
+}
